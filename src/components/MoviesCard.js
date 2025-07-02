@@ -2,6 +2,16 @@ import React from "react";
 import "../styles.css";
 
 export default function MoviesCard({ movie, toogleWatchList, isWatchlisted }) {
+  console.log(
+    "-----MovieCard-----",
+    "movie",
+    movie,
+    "toogleWatchList",
+    toogleWatchList,
+    "isWatchlisted",
+    isWatchlisted
+  );
+
   const handleError = (e) => {
     e.target.src = "images/default.jpg";
   };

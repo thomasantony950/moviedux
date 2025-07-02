@@ -25,6 +25,26 @@ function App() {
     );
   };
 
+  // const toogleWatchList = (movieID) => {
+  //   setWatchlist((prev) => {
+  //     console.log("Previous watchlist:", prev); // Log the previous state of the watchlist
+
+  //     if (prev.includes(movieID)) {
+  //       console.log(`Removing movie ID: ${movieID}`); // Log the removal case
+  //       const updatedWatchlist = prev.filter((id) => id !== movieID);
+  //       console.log("Updated watchlist after removal:", updatedWatchlist); // Log the new state after removal
+  //       return updatedWatchlist;
+  //     } else {
+  //       console.log(`Adding movie ID: ${movieID}`); // Log the addition case
+  //       const updatedWatchlist = [...prev, movieID];
+  //       console.log("Updated watchlist after addition:", updatedWatchlist); // Log the new state after addition
+  //       return updatedWatchlist;
+  //     }
+  //   });
+  // };
+
+  console.log("-----Apps-----", "movies", movies, "watchlist", watchlist);
+
   return (
     <div className="App">
       <div className="container">

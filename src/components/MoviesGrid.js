@@ -3,6 +3,16 @@ import "../styles.css";
 import MoviesCard from "./MoviesCard";
 
 export default function MoviesGrid({ movies, watchlist, toogleWatchList }) {
+  console.log(
+    "-----MoviesGrid-----",
+    "movies",
+    movies,
+    "watchlist",
+    watchlist,
+    "toogleWatchList",
+    toogleWatchList
+  );
+
   const [searchTerm, setSearchTerm] = useState("");
   const [genre, setGenre] = useState("All Genres");
   const [rating, setRating] = useState("All");
@@ -20,7 +30,7 @@ export default function MoviesGrid({ movies, watchlist, toogleWatchList }) {
   };
 
   const matchesGenre = (movie, genre) => {
-    console.log("movie", movie, "genre", genre);
+    // console.log("movie", movie, "genre", genre);
     return (
       genre === "All Genres" ||
       movie.genre.toLowerCase() === genre.toLowerCase()
@@ -28,7 +38,7 @@ export default function MoviesGrid({ movies, watchlist, toogleWatchList }) {
   };
 
   const matchesRating = (movie, rating) => {
-    console.log("movie", movie, "rating", rating);
+    // console.log("movie", movie, "rating", rating);
     switch (rating) {
       case "All":
         return true;
@@ -48,22 +58,22 @@ export default function MoviesGrid({ movies, watchlist, toogleWatchList }) {
   };
 
   const matchesSearchTerm = (movie, searchTerm) => {
-    console.log("movie", movie, "searchTerm", searchTerm);
+    // console.log("movie", movie, "searchTerm", searchTerm);
     return movie.title.toLowerCase().includes(searchTerm.toLowerCase());
   };
 
   const filteredMoviesList = movies.filter((movie) => {
-    console.log(
-      "#############",
-      "movie",
-      movie,
-      "genre",
-      genre,
-      "rating",
-      rating,
-      "searchTerm",
-      searchTerm
-    );
+    // console.log(
+    //   "#############",
+    //   "movie",
+    //   movie,
+    //   "genre",
+    //   genre,
+    //   "rating",
+    //   rating,
+    //   "searchTerm",
+    //   searchTerm
+    // );
     return (
       matchesGenre(movie, genre) &&
       matchesRating(movie, rating) &&
@@ -71,7 +81,7 @@ export default function MoviesGrid({ movies, watchlist, toogleWatchList }) {
     );
   });
 
-  console.log("filteredMovies", filteredMoviesList);
+  // console.log("filteredMovies", filteredMoviesList);
 
   return (
     <div>
